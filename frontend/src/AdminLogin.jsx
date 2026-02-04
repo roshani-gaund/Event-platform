@@ -14,7 +14,7 @@ const AdminLogin = () => {
   }, []);
 
   const loginWithGoogle = () => {
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href = "https://event-platform-d4hu.onrender.com/api/auth/google";
   };
 
   return (

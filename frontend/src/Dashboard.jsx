@@ -19,7 +19,7 @@ const Dashboard = () => {
   const loadEvents = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/events/event", {
+      const res = await axios.get("https://event-platform-d4hu.onrender.com/api/events/event", {
       
         params: {
           city,
@@ -49,7 +49,7 @@ const Dashboard = () => {
       setImportingId(id);
 
       await axios.post(
-        `http://localhost:5000/api/events/${id}/import`);
+        `https://event-platform-d4hu.onrender.com/api/events/${id}/import`);
 
       loadEvents(); // ONLY ONE SOURCE
     } catch (err) {

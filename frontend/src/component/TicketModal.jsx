@@ -16,7 +16,7 @@ const TicketModal = ({ event, close }) => {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:5000/api/leads", {
+      await axios.post("https://event-platform-d4hu.onrender.com/api/leads", {
         email,
         consent,
         eventId: event._id,
