@@ -12,7 +12,7 @@ router.get("/google", (req, res) => {
   });
 
   res.redirect(
-    `http://localhost:5173/dashboard?token=${token}`
+    `https://event-platform-ecru-gamma.vercel.app/dashboard?token=${token}`
   );
 });
 

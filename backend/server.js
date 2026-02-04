@@ -9,7 +9,11 @@ import eventRoute from "./routes/eventRoutes.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  { origin: ["https://event-platform-ecru-gamma.vercel.app", "http://localhost:5173"],
+    credentials: true
+     }
+));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
